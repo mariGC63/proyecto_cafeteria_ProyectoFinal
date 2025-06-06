@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E98ACAD6-6AA0-4ED0-9BA7-9A36D3F39D25}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proyecto_cafeteria</RootNamespace>
+    <AssemblyName>proyecto_cafeteria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.0.33.1\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\Eliminar_ ingredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\Eliminar_ ingredientes.Designer.cs">
+      <DependentUpon>Eliminar_ ingredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\Eliminar_pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\Eliminar_pedidos.Designer.cs">
+      <DependentUpon>Eliminar_pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\Eliminar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\Eliminar_producto.Designer.cs">
+      <DependentUpon>Eliminar_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\FormReportesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\FormReportesVentas.Designer.cs">
+      <DependentUpon>FormReportesVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\principal_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\principal_admin.Designer.cs">
+      <DependentUpon>principal_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\ProcessingMode.cs" />
+    <Compile Include="interfaz de administrador\Registrar_ingredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\Registrar_ingredientes.Designer.cs">
+      <DependentUpon>Registrar_ingredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\Registrar_pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\Registrar_pedidos.Designer.cs">
+      <DependentUpon>Registrar_pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\ReportDataSource.cs" />
+    <Compile Include="interfaz de administrador\ReporteVentas.cs" />
+    <Compile Include="interfaz de administrador\UserAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserAdmin.Designer.cs">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserBebidas2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserBebidas2.Designer.cs">
+      <DependentUpon>UserBebidas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserCategoria2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserCategoria2.Designer.cs">
+      <DependentUpon>UserCategoria2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserComidaRapida2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserComidaRapida2.Designer.cs">
+      <DependentUpon>UserComidaRapida2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\Registrar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\Registrar_producto.Designer.cs">
+      <DependentUpon>Registrar_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserCrepas2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserCrepas2.Designer.cs">
+      <DependentUpon>UserCrepas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserInventario2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserInventario2.Designer.cs">
+      <DependentUpon>UserInventario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserMalteadas2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserMalteadas2.Designer.cs">
+      <DependentUpon>UserMalteadas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserPedidos2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserPedidos2.Designer.cs">
+      <DependentUpon>UserPedidos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserVentas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz de administrador\UserVentas.Designer.cs">
+      <DependentUpon>UserVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\Eliminar_ingrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\Eliminar_ingrediente.Designer.cs">
+      <DependentUpon>Eliminar_ingrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\Eliminar_pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\Eliminar_pedido.Designer.cs">
+      <DependentUpon>Eliminar_pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\Eliminar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\Eliminar_producto.Designer.cs">
+      <DependentUpon>Eliminar_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\interfaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\interfaz.Designer.cs">
+      <DependentUpon>interfaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\IProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\IProducto.Designer.cs">
+      <DependentUpon>IProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\Registrar_ingrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\Registrar_ingrediente.Designer.cs">
+      <DependentUpon>Registrar_ingrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\Registrar_pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\Registrar_pedido.Designer.cs">
+      <DependentUpon>Registrar_pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserAyuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserAyuda.Designer.cs">
+      <DependentUpon>UserAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserBedidas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserBedidas.Designer.cs">
+      <DependentUpon>UserBedidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserCategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserCategoria.Designer.cs">
+      <DependentUpon>UserCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserComidaRapida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserComidaRapida.Designer.cs">
+      <DependentUpon>UserComidaRapida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserCrepas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserCrepas.Designer.cs">
+      <DependentUpon>UserCrepas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserInventario.Designer.cs">
+      <DependentUpon>UserInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserMalteadas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserMalteadas.Designer.cs">
+      <DependentUpon>UserMalteadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserPedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserPedidos.Designer.cs">
+      <DependentUpon>UserPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_principal\UserPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="interfaz_principal\UserPerfil.Designer.cs">
+      <DependentUpon>UserPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft\Reporting.cs" />
+    <Compile Include="Modulo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DataSorces\DataSorces.cs" />
+    <Compile Include="recuperar_contraseña\Recuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recuperar_contraseña\Recuperacion.Designer.cs">
+      <DependentUpon>Recuperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetReportes.cs">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\Eliminar_ ingredientes.resx">
+      <DependentUpon>Eliminar_ ingredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\Eliminar_pedidos.resx">
+      <DependentUpon>Eliminar_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\Eliminar_producto.resx">
+      <DependentUpon>Eliminar_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\FormReportesVentas.resx">
+      <DependentUpon>FormReportesVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\principal_admin.resx">
+      <DependentUpon>principal_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\Registrar_ingredientes.resx">
+      <DependentUpon>Registrar_ingredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\Registrar_pedidos.resx">
+      <DependentUpon>Registrar_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\Registrar_producto.resx">
+      <DependentUpon>Registrar_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserAdmin.resx">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserBebidas2.resx">
+      <DependentUpon>UserBebidas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserCategoria2.resx">
+      <DependentUpon>UserCategoria2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserComidaRapida2.resx">
+      <DependentUpon>UserComidaRapida2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserCrepas2.resx">
+      <DependentUpon>UserCrepas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserInventario2.resx">
+      <DependentUpon>UserInventario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserMalteadas2.resx">
+      <DependentUpon>UserMalteadas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserPedidos2.resx">
+      <DependentUpon>UserPedidos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz de administrador\UserVentas.resx">
+      <DependentUpon>UserVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\Eliminar_ingrediente.resx">
+      <DependentUpon>Eliminar_ingrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\Eliminar_pedido.resx">
+      <DependentUpon>Eliminar_pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\Eliminar_producto.resx">
+      <DependentUpon>Eliminar_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\interfaz.resx">
+      <DependentUpon>interfaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\IProducto.resx">
+      <DependentUpon>IProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\Registrar_ingrediente.resx">
+      <DependentUpon>Registrar_ingrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\Registrar_pedido.resx">
+      <DependentUpon>Registrar_pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserAyuda.resx">
+      <DependentUpon>UserAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserBedidas.resx">
+      <DependentUpon>UserBedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserCategoria.resx">
+      <DependentUpon>UserCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserComidaRapida.resx">
+      <DependentUpon>UserComidaRapida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserCrepas.resx">
+      <DependentUpon>UserCrepas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserInventario.resx">
+      <DependentUpon>UserInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserMalteadas.resx">
+      <DependentUpon>UserMalteadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserPedidos.resx">
+      <DependentUpon>UserPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_principal\UserPerfil.resx">
+      <DependentUpon>UserPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="recuperar_contraseña\Recuperacion.resx">
+      <DependentUpon>Recuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteVentas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.Eliminar_ingredientes.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.Eliminar_pedidos.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.Eliminar_producto.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.principal_admin.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.Registrar_ingredientes.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.Registrar_pedidos.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.Registrar_producto.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserAdmin.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserBebidas2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserCategoria2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserComidaRapida2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserControl1.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserCrepas2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserInventario2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserMalteadas2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserPedidos2.datasource" />
+    <None Include="Properties\DataSorces\proyecto_cafeteria.interfaz_de_administrador.UserVentas.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reportes\DataSetReportes.xsc">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetReportes.xss">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\WhatsApp_Image_2025-04-15_at_6.09.09_PM-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp_Image_2025-04-15_at_6.09.09_PM-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-web-de-ayuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\malteda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comida_rapida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bebidas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harina.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azucar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leche.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jitomate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cebolla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lechugas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarImagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
